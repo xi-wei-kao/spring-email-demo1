@@ -1,0 +1,21 @@
+
+spring: 
+#  freemarker: 
+#    cache: true
+#    template-loader-path: 
+  mail: 
+    ## SMTP 位址
+    host: smtp.gmail.com
+    port: 587
+    ## credential
+    username: aa349349@gmail.com
+    password: sike jtsi uoyu kral
+    properties:
+      mail: 
+        smtp: 
+          auth: true  # 啟用SMTP身份驗證
+          starttls: 
+            enable: true # 啟用STARTTLS加密
+#            required: true
+      debug: true
+    default-encoding: utf-8
