@@ -31,11 +31,11 @@ public class EmailTest1Service {
 	public String process(EmailTest1ReqResDTO reqBody) {
 		
 		// [CASE1]: 寄送一般文字訊息
-		// sendMail(reqBody.getMailAddress(), reqBody.getMailTitle(), reqBody.getMaillMessage());
+		 sendMail(reqBody.getMailAddress(), reqBody.getMailTitle(), reqBody.getMaillMessage());
 		
 		// [CASE2]: 寄送夾帶附件訊息
-		sendMailWithAttachment(reqBody.getMailAddress(), 
-				reqBody.getMailTitle(), reqBody.getMaillMessage());
+//		sendMailWithAttachment(reqBody.getMailAddress(),
+//				reqBody.getMailTitle(), reqBody.getMaillMessage());
 		
 		return "OK";
 	}
@@ -45,7 +45,7 @@ public class EmailTest1Service {
 		log.info("[EmailTest1Service]: sendMail start");
 		
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom(env.getProperty("spring.mail.username"));
+		message.setFrom(env.getProperty("spring.mail.from"));
 		message.setTo(mailAddress);
 		message.setSubject(title);
 		message.setText(messageContext);

@@ -2,20 +2,60 @@
 spring: 
 #  freemarker: 
 #    cache: true
-#    template-loader-path: 
-  mail: 
-    ## SMTP 位址
-    host: smtp.gmail.com
+#    template-loader-path:
+
+# =============================================
+# SMTP - Gmail
+# =============================================
+#  mail:
+#    ## SMTP 位址
+#    host: smtp.gmail.com
+#    port: 587
+#    ## credential
+#    username: aa349349@gmail.com
+#    password: sike jtsi uoyu kral
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true  # 啟用SMTP身份驗證
+#          starttls:
+#            enable: true # 啟用STARTTLS加密
+#      #            required: true
+#      debug: true
+#    default-encoding: utf-8
+
+# =============================================
+# SMTP - Outlook
+# =============================================
+#  mail:
+#    username: aa349349@outlook.com
+#    password: dlkqhwyyaztgycxi  # 使用應用程式密碼
+#    host: smtp-mail.outlook.com    # 使用 Office 365 SMTP 伺服器
+#    port: 587
+#    from: <aa349349@outlook.com>
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true            # 啟用 SMTP 身份驗證
+#          starttls:
+#            enable: true        # 啟用 STARTTLS 加密
+#        default-encoding: UTF-8
+#      debug: true               # 啟用調試以獲取詳細日誌
+
+# =============================================
+# SMTP - Amazon SES
+# =============================================
+  mail:
+    username: AKIAWMNJJT26UECBDEG5
+    password: BLx00hEGYca7kdVLRtYmgfZipeZWq6GDkDL5L8rG7jqC
+    from: hsiwei.kao@hdrenewables.com
+    host: email-smtp.ap-northeast-1.amazonaws.com
     port: 587
-    ## credential
-    username: aa349349@gmail.com
-    password: sike jtsi uoyu kral
     properties:
-      mail: 
-        smtp: 
-          auth: true  # 啟用SMTP身份驗證
-          starttls: 
-            enable: true # 啟用STARTTLS加密
-#            required: true
-      debug: true
-    default-encoding: utf-8
+      mail:
+        smtp:
+          auth: true            # 啟用 SMTP 身份驗證
+          starttls:
+            enable: true        # 啟用 STARTTLS 加密
+        default-encoding: UTF-8
+      debug: true               # 啟用調試以獲取詳細日誌
