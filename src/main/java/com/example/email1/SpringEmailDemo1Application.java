@@ -12,4 +12,3 @@ public class SpringEmailDemo1Application {
 	}
 
 }
-｀
