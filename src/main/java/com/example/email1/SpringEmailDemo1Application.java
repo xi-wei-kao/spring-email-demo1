@@ -13,6 +13,8 @@ public class SpringEmailDemo1Application {
 		System.out.print("我是從 fork 來的, 我改好了接受我2");
 		System.out.print("333");
 		System.out.print("downstream");
+
+		System.out.print("update");
 	}
 
 }
